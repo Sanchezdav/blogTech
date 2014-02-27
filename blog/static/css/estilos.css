@@ -1,0 +1,260 @@
+/*----------------------Icomoon------------------------*/
+@font-face {
+    font-family: 'icomoon';
+    src:url('fonts/icomoon.eot?-oxo4ea');
+    src:url('fonts/icomoon.eot?#iefix-oxo4ea') format('embedded-opentype'),
+        url('fonts/icomoon.woff?-oxo4ea') format('woff'),
+        url('fonts/icomoon.ttf?-oxo4ea') format('truetype'),
+        url('fonts/icomoon.svg?-oxo4ea#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+    content: "\e600";
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.icon-twitter:hover
+{
+    color: #16a085;
+}
+
+.icon-facebook:before {
+    content: "\e601";
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+}
+.icon-google-plus:before {
+    content: "\e602";
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+}
+.icon-github:before {
+    content: "\e603";
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+}
+.icon-pinterest:before {
+    content: "\e604";
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+/*----------------------Icomoon------------------------*/
+
+@font-face {
+    font-family: 'source_sans_proregular';
+    src: url('fonts/sourcesanspro-regular.eot');
+    src: url('fonts/sourcesanspro-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/sourcesanspro-regular.woff') format('woff'),
+         url('fonts/sourcesanspro-regular.ttf') format('truetype'),
+         url('fonts/sourcesanspro-regular.svg#source_sans_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'chunkfiveroman';
+    src: url('fonts/chunkfive.eot');
+    src: url('fonts/chunkfive.eot?#iefix') format('embedded-opentype'),
+         url('fonts/chunkfive.woff') format('woff'),
+         url('fonts/chunkfive.ttf') format('truetype'),
+         url('fonts/chunkfive.svg#chunkfiveroman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background: #ecf0f1;
+    font-family: "source_sans_proregular",Helvetica, Arial;
+}
+
+header
+{
+    background: #34495e;
+    position: relative;
+    width: 100%;
+}
+
+header figure
+{
+    display: inline-block;
+    padding-left: 1em;
+    padding-top: .5em;
+    width: 15%;
+}
+
+
+header h1
+{
+    color: white;
+    font-family: "chunkfiveroman",Helvetica, Arial;
+    font-size: 3em;
+}
+
+nav
+{
+    background: #2980b9;
+    padding: 1.3em;
+    margin-bottom: 2.5em;
+    text-align: center;
+    width: 97%;
+}
+
+nav ul li
+{
+    display: inline-block;
+}
+
+nav ul li a
+{
+    color: white;
+    font-weight: bold;
+    padding: .8em 1em;
+    text-decoration: none;
+
+    -webkit-transition: background .3s ease;
+    -moz-transition: background .3s ease;
+    -ms-transition: background .3s ease;
+    -o-transition: background .3s ease;
+    transition: background .3s ease;
+
+}
+
+nav ul li a:hover
+{
+    background: #27ae60;
+    border-radius: 2px;
+}
+
+#caja-h1
+{
+    display: inline-block;
+    margin-top: 2em;
+    margin-left: 4em;
+    vertical-align: top;
+    width: 35%;
+}
+
+#caja-login
+{
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
+#contenido
+{
+    border: 1px solid black;
+    margin: .5em auto;
+    padding: .3em;
+    width: 95%;
+}
+
+#contenido aside
+{
+    border: 1px solid black;
+    display: inline-block;
+    padding: .3em;
+    vertical-align: top;
+    width: 30%;   
+}
+
+#contenido section
+{
+    border: 1px solid black;
+    display: inline-block; 
+    margin-right: 4em;
+    padding: .3em;
+    width: 60%;
+}
+
+#contenido section article
+{
+    border: 1px solid black;
+    display: inline-block;
+    margin-right: 2em;
+    height: 15em;
+    vertical-align: top;
+    width: 45%;
+}
+
+#contenido section article h1
+{
+    font-family: "chunkfiveroman",Helvetica, Arial;
+}
+
+#login
+{
+    background: #3498db;
+    border-radius: 5px;
+    box-shadow: rgba(255,255,255,0.5) 2px 2px 10px; 
+    color: white;
+    padding: .3em .8em;
+    text-decoration: none;
+
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#login:hover
+{
+    background: #27ae60;
+}
+
+#redes-sociales
+{
+    bottom: .5em;
+    display: inline-block;
+    padding: .2em;
+    position: absolute;
+    right: 1em;
+    text-align: right;
+    width: 20%;
+}
+
+#redes-sociales a 
+{
+    margin-right: .5em;
+   text-decoration: none;
+}
+
+#slider
+{
+    margin: .5em 0 .5em 4.2em;
+    text-align: left;
+    width: 80%;
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titulo %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/estilos.css" type="text/css">
+    {% block importar %}{% endblock %}
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="{{ STATIC_URL }}img/logoblanco.png" alt="Logo" width="100px">
+        </figure>
+        <div id="caja-h1">
+            <h1>Blog de Tecnologia</h1>
+        </div>
+        <div id="redes-sociales">
+            <a href="" class="icon-twitter"></a>
+            <a href="" class="icon-facebook"></a>
+            <a href="" class="icon-google-plus"></a>
+            <a href="" class="icon-github"></a>
+            <a href="" class="icon-pinterest"></a>
+        </div>
+        <div id="caja-login">
+            <a href="" id="login">Login</a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Noticias</a></li>
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#" id="publicar">Publicar</a></li>
+        </ul>
+    </nav>
+    {% block slider %}{% endblock %}
+    <div id="contenido">
+        {% block contenido %}{% endblock %}
+        <aside>
+            {% for item in publicacion %}
+                <article>
+                    {{item.titulo}} <br>
+                    {{item.contenido|truncatewords:5}}
+                </article>
+            {% endfor %}
+        </aside>
+    </div>
+    <footer>
+        Copyright &copy;
+    </footer>
+</body>
+</html>

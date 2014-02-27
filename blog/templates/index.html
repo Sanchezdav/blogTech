@@ -1,0 +1,50 @@
+{% extends "base.html "%}
+
+
+{% block titulo %}Inicio{% endblock %}
+
+{% block importar %}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}slider/engine1/style.css" />
+    <script type="text/javascript" src="{{ STATIC_URL }}slider/engine1/jquery.js"></script>
+{% endblock %}
+
+{% block slider %}
+    <div id="slider">
+       <!-- Start WOWSlider.com BODY section -->
+        <div id="wowslider-container1">
+            <div class="ws_images"><ul>
+                <li><img src="{{STATIC_URL}}slider/data1/images/1.png" alt="Responsive Web Design" title="Responsive Web Design" id="wows1_0"/>Conoce más...</li>
+                <li><img src="{{STATIC_URL}}slider/data1/images/2.png" alt="Redes Sociales" title="Redes Sociales" id="wows1_1"/>Conoce su impacto en tu sitio web</li>
+                <li><img src="{{STATIC_URL}}slider/data1/images/3.jpg" alt="Facebook" title="Facebook" id="wows1_2"/>Leer mas..</li>
+                <li><img src="{{STATIC_URL}}slider/data1/images/4.png" alt="Marketing Web" title="Marketing Web" id="wows1_3"/>Da click aquí..</li>
+                </ul>
+            </div>
+            <div class="ws_thumbs">
+                <div>
+                <a href="#" title="Responsive Web Design"><img src="{{STATIC_URL}}slider/data1/tooltips/1.png" alt="" /></a>
+                <a href="#" title="Redes Sociales"><img src="{{STATIC_URL}}slider/data1/tooltips/2.png" alt="" /></a>
+                <a href="#" title="Facebook"><img src="{{STATIC_URL}}slider/data1/tooltips/3.jpg" alt="" /></a>
+                <a href="#" title="Marketing Web"><img src="{{STATIC_URL}}slider/data1/tooltips/4.png" alt="" /></a>
+                </div>
+            </div>
+            <div class="ws_shadow"></div>
+        </div>
+    <script type="text/javascript" src="{{STATIC_URL}}slider/engine1/wowslider.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}slider/engine1/script.js"></script>
+    <!-- End WOWSlider.com BODY section -->
+    </div>
+{% endblock %}
+
+{% block contenido %}
+    <section>
+        {% for item in publicacion %}
+        <article>
+            <figure>
+                <img src="{{MEDIA_URL}}{{item.imagen}}" alt="Imagen de Publicacion" width=120px height=120px>
+            </figure>
+            <h1>{{item.titulo}}</h1> <br>
+            <p>{{item.contenido|truncatewords:20}}</p>
+        </article>
+        {% endfor %}
+    </section>
+{% endblock %}
