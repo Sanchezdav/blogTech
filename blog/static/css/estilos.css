@@ -16,7 +16,7 @@
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
-    text-transform: none;
+    transform: none;
     line-height: 1;
 
     /* Better Font Rendering =========== */
@@ -29,11 +29,20 @@
     color: white;
     font-size: 2em;
     text-decoration: none;
+	
+	-webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
 }
 
-.icon-twitter:hover
+.icon-twitter:hover:before
 {
-    color: #16a085;
+	content: "\e600";
+	color: #27ae60;
+	font-size: 2.1em;
+    text-decoration: none;
 }
 
 .icon-facebook:before {
@@ -41,23 +50,82 @@
     color: white;
     font-size: 2em;
     text-decoration: none;
+	
+	-webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
 }
+
+.icon-facebook:hover:before
+{
+	content: "\e601";
+	color: #27ae60;
+	font-size: 2.1em;
+    text-decoration: none;
+}
+
 .icon-google-plus:before {
     content: "\e602";
     color: white;
     font-size: 2em;
     text-decoration: none;
+	
+	-webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
 }
+
+.icon-google-plus:hover:before
+{
+	content: "\e602";
+	color: #27ae60;
+	font-size: 2.1em;
+    text-decoration: none;
+}
+
 .icon-github:before {
     content: "\e603";
     color: white;
     font-size: 2em;
     text-decoration: none;
+	
+	-webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
 }
+
+.icon-github:hover:before
+{
+	content: "\e603";
+	color: #27ae60;
+	font-size: 2.1em;
+    text-decoration: none;
+}
+
 .icon-pinterest:before {
     content: "\e604";
     color: white;
     font-size: 2em;
+    text-decoration: none;
+	
+	-webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.icon-pinterest:hover:before
+{
+	content: "\e604";
+	color: #27ae60;
+	font-size: 2.1em;
     text-decoration: none;
 }
 
@@ -114,21 +182,39 @@ header figure
     width: 15%;
 }
 
+header figure img
+{
+	-webkit-transition:0.5s;
+	-moz-transition:0.5s;
+	-ms-transition:0.5s;
+	-o-transition:0.5s;
+	transition:0.5s;
+}
+
+header figure img:hover
+{
+	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+	transform:rotate(360deg);
+}
+
 
 header h1
 {
     color: white;
     font-family: "chunkfiveroman",Helvetica, Arial;
-    font-size: 3em;
+    font-size: 2.8em;
 }
 
 nav
 {
     background: #2980b9;
-    padding: 1.3em;
+    padding: .8em;
     margin-bottom: 2.5em;
     text-align: center;
-    width: 97%;
+    width: 98%;
 }
 
 nav ul li
@@ -239,6 +325,7 @@ nav ul li a:hover
 {
     bottom: .5em;
     display: inline-block;
+	margin-left:.2em;
     padding: .2em;
     position: absolute;
     right: 1em;
