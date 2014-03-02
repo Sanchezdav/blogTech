@@ -25,20 +25,24 @@
         <div id="caja-login">
             <a href="" id="login">Login</a>
         </div>
+		<div id="caja-registrarse">
+            <a href="" id="registrarse">Registrarse</a>
+        </div>
     </header>
     <nav>
         <ul>
-            <li><a href="#">Inicio</a></li>
+            <li><a href="/">Inicio</a></li>
             <li><a href="#">Noticias</a></li>
             <li><a href="#">Categorias</a></li>
             <li><a href="#">Contacto</a></li>
-            <li><a href="#" id="publicar">Publicar</a></li>
+            <li id="publicar"><a href="#">Publicar</a></li>
         </ul>
     </nav>
     {% block slider %}{% endblock %}
     <div id="contenido">
         {% block contenido %}{% endblock %}
         <aside>
+		<h2>Las primeras 5</h2>
             {% for item in publicacion %}
                 <article>
                     {{item.titulo}} <br>
