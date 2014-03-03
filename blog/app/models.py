@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+#libreria para los thumbnails
+from easy_thumbnails.fields import ThumbnailerImageField
 
 class Perfil(models.Model):
     usuario = models.OneToOneField(User)
@@ -26,7 +28,7 @@ class Publicacion(models.Model):
     contenido = models.TextField(max_length = 255)
     categoria = models.ManyToManyField(Categoria)
     fechaPub = models.DateTimeField(auto_now_add = True)
-    imagen = models.ImageField(upload_to="img-pub", null=True, blank=True)
+    imagen = ThumbnailerImageField(upload_to="img-pub", null=True, blank=True)
     
     class Meta():
         verbose_name_plural = 'Publicaciones'

@@ -1,2 +1,4 @@
 Django==1.6.2
 Pillow==2.3.0
+easy-thumbnails==1.4
+six==1.5.2

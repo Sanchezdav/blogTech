@@ -41,7 +41,9 @@
         {% for item in publicacion %}
         <article>
             <figure>
-                <img src="{{MEDIA_URL}}{{item.imagen}}" alt="Imagen de Publicacion" width=120px height=120px>
+                {% load thumbnail %}
+                <img src="{% thumbnail item.imagen 100x100 crop %}" alt="Imagen de Publicacion" />
+                <!--<img src="{{MEDIA_URL}}{{item.imagen}}" alt="Imagen de Publicacion" width=120px height=120px>-->
             </figure>
             <h1>{{item.titulo}}</h1> <br>
             <p>{{item.contenido|truncatewords:20}}</p>
