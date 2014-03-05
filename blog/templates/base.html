@@ -45,8 +45,13 @@
 		<h2>Las primeras 5</h2>
             {% for item in publicacion %}
                 <article>
-                    {{item.titulo}} <br>
-                    {{item.contenido|truncatewords:5}}
+                    <h1>{{item.titulo}}</h1>
+                    <figure>
+                        {% load thumbnail %}
+                        <img src="{% thumbnail item.imagen 50x50 crop %}" alt="Imagen de Publicacion" />
+                    </figure>
+                    <p>{{item.contenido|truncatewords:15}}</p>
+                    <a href="#">Leer mas..</a>                   
                 </article>
             {% endfor %}
         </aside>

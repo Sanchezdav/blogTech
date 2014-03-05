@@ -290,11 +290,65 @@ nav ul li a:hover
 
 #contenido aside
 {
-    border: 1px solid black;
+   
     display: inline-block;
     padding: .3em;
     vertical-align: top;
-    width: 30%;   
+    width: 30%; 
+    background-color: gainsboro;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 2px solid darkslategrey;
+}
+
+#contenido aside article
+{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid white;
+    display: inline-block;
+    background-color: darkslategrey;
+    width: 95%;
+    padding: .5em;
+    margin: .2em;
+    color: white;
+}
+
+#contenido aside article h1
+{
+    color: white;
+    display:block;
+    margin-left: .5em;
+    margin-bottom: .3em;
+}
+
+#contenido aside article br
+{
+    color: white;
+    margin-bottom: 1em;
+}
+
+#contenido aside article figure img
+{
+   
+    float: left;
+    border:2px solid withe;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-right: .5em;
+}
+    
+#contenido aside article a
+{
+    display:inline-block;
+    float: right;
+    text-decoration: none;
+    color:#2980b9;
+    font-weight: bold;
+    
 }
 
 #contenido section
