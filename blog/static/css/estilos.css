@@ -172,9 +172,23 @@ body
     font-family: "source_sans_proregular",Helvetica, Arial;
 }
 
+footer
+{
+    background: #34495e;
+    color: white;
+    font-family: Helvetica, Arial;
+    margin-top: 3em;
+    margin-right: auto;
+    margin-left: auto;
+    padding: .5em;
+    width: 98.5%;
+}
+
 header
 {
     background: #34495e;
+    margin-right: auto;
+    margin-left: auto;
     position: relative;
     width: 100%;
 }
@@ -218,10 +232,11 @@ nav
 {
     background: #2980b9;
     padding: .8em;
-    margin-bottom: 2.5em;
+    margin-right: auto;
+    margin-left: auto;
 	position: relative;
     text-align: center;
-    width: 98%;
+    width: 98.1%;
 }
 
 nav ul li
@@ -282,9 +297,8 @@ nav ul li a:hover
 
 #contenido
 {
-    border: 1px solid black;
-    margin: .5em auto;
-    padding: .3em;
+    margin: 1em auto;
+    padding: .1em;
     width: 95%;
 }
 
@@ -296,10 +310,11 @@ nav ul li a:hover
     vertical-align: top;
     width: 30%; 
     background-color: gainsboro;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
     border-radius: 3px;
-    border: 2px solid darkslategrey;
+    box-shadow: rgba(0,0,0,0.6) 5px 5px 15px;
+    margin-top: 1em;
 }
 
 #contenido aside article
@@ -324,12 +339,6 @@ nav ul li a:hover
     margin-bottom: .3em;
 }
 
-#contenido aside article br
-{
-    color: white;
-    margin-bottom: 1em;
-}
-
 #contenido aside article figure img
 {
    
@@ -346,25 +355,46 @@ nav ul li a:hover
     display:inline-block;
     float: right;
     text-decoration: none;
-    color:#2980b9;
+    color:deepskyblue;
     font-weight: bold;
     
 }
 
 #contenido section
 {
-    border: 1px solid black;
+    background: gainsboro;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.6) 5px 5px 15px;
     display: inline-block; 
-    margin-right: 4em;
-    padding: .3em;
+    margin-right: 3em;
+    margin-top: 1em;
+    padding: .1em;
+    padding-left: 1em;
     width: 60%;
+}
+
+#contenido section h2
+{
+    font-family: Helvetica, Arial;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: rgba(0,0,0,0.6) 1px 1px 2px;
 }
 
 #contenido section article
 {
-    border: 1px solid black;
+    background: darkslategrey;
+    border-radius: 15px;
+    box-shadow: rgba(0,0,0,0.6) 3px 3px 10px;
+    color: white;
     display: inline-block;
-    margin-right: 2em;
+    margin-right: 1.4em;
+    margin-bottom: 1.4em;
+    margin-top: .5em;
+    padding: .3em;
+    padding-top: .5em;
+    position: relative;
     height: 15em;
     vertical-align: top;
     width: 45%;
@@ -372,8 +402,109 @@ nav ul li a:hover
 
 #contenido section article h1
 {
-    font-family: "chunkfiveroman",Helvetica, Arial;
+    font-family: Helvetica, Arial;
+    font-size: 1.4em;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
 }
+
+#content-login
+{
+    background: skyblue;
+    box-shadow: rgba(0,0,0,0.6) 0px 5px 20px;
+    display: none;
+    margin: 0 auto 2.5em auto;
+    padding: 1.25em;
+    text-align: center;
+    width: 97%;
+}
+
+#form-login label
+{
+    font-family: Helvetica, Arial;
+    font-size: 1.4em;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 1em;
+}
+
+#form-login input[type=text], input[type=password]
+{
+    border: 2px solid #2980b9;
+    border-radius: 4px;
+    padding: .2em;
+}
+
+#img-articulo
+{
+    display: inline-block;
+    margin: .4em;
+    margin-right: 1.4em;
+    width: 40%
+}
+
+#img-articulo img
+{
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.6) 5px 5px 20px;
+
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+#img-articulo img:hover
+{
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#titulo-articulo
+{
+    display: inline-block;
+    margin-top: 1.2em;
+    text-shadow: rgba(0,0,0,0.6) 2px 2px 5px;
+    vertical-align: top;
+    width: 45%
+}
+
+#contenido-articulo
+{
+    width: 90%
+}
+
+#contenido-articulo p
+{
+    font-size: 1.2em;
+    padding-left: .4em;
+}
+
+#ver-mas
+{
+    position: absolute;
+    right: .5em;
+    bottom: .2em;
+    text-align: right;
+    width: 30%;
+}
+
+#ver-mas a
+{
+    color: deepskyblue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
 
 #login
 {
@@ -411,7 +542,7 @@ nav ul li a:hover
 	background: #27ae60;
 	border-radius: 5px;
     box-shadow: rgba(0,0,0,0.6) 5px 5px 20px;
-	padding: .8em 1.7em;
+	padding: .75em 1.6em;
 	text-shadow: rgba(0,0,0,0.6) 2px 2px 5px;
 }
 
@@ -464,7 +595,32 @@ nav ul li a:hover
 
 #slider
 {
-    margin: .5em 0 .5em 4.2em;
+    margin: 2em 0 .5em 8.5em;
     text-align: left;
     width: 80%;
+}
+
+.boton 
+{
+    background: #3498db;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.6) 2px 2px 10px;
+    color: white;
+    font-weight: bold;
+    margin-left: 1em;
+    padding: .4em .9em;
+    text-shadow: rgba(0,0,0,0.6) 2px 2px 5px;
+
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.boton:hover
+{
+    background: #27ae60;
+    cursor: pointer;
 }

@@ -5,7 +5,11 @@
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
     <title>{% block titulo %}{% endblock %}</title>
     <link rel="stylesheet" href="{{ STATIC_URL }}css/estilos.css" type="text/css">
+    <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" />
     {% block importar %}{% endblock %}
+    <script src="{{ STATIC_URL }}js/jquery.js"></script>
+    <script src="{{ STATIC_URL }}js/script.js"></script>
+    {% block importar2 %}{% endblock %}
 </head>
 <body>
     <header>
@@ -23,7 +27,7 @@
             <a href="http://www.pinterest.com" class="icon-pinterest" target="_blank"></a>
         </div>
         <div id="caja-login">
-            <a href="" id="login">Login</a>
+            <a href="#" id="login">Login</a>
         </div>
 		<div id="caja-registrarse">
             <a href="" id="registrarse">Registrarse</a>
@@ -38,6 +42,13 @@
             <li id="publicar"><a href="#">Publicar</a></li>
         </ul>
     </nav>
+    <div id="content-login">
+        <form id="form-login" method="POST">{% csrf_token %}
+            <label for="username">Usuario: </label><input type="text" name="username" class="placeholder" placeholder="Usuario">
+            <label for="password">Password: </label><input type="password" name="password" class="placeholder" placeholder="Password">
+            <input type="submit" value="Entrar" class="boton">
+        </form>
+    </div>
     {% block slider %}{% endblock %}
     <div id="contenido">
         {% block contenido %}{% endblock %}
@@ -57,7 +68,10 @@
         </aside>
     </div>
     <footer>
-        Copyright &copy;
+        <p>Copyright &copy;</p><br>
+        <p>Diseñado y elaborado por:</p><br>
+        <p>Karla Liliana Jaurez Gomez</p>
+        <p>Fausto David Sanchez Salazar</p>
     </footer>
 </body>
 </html>

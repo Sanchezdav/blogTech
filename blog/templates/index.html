@@ -4,49 +4,60 @@
 {% block titulo %}Inicio{% endblock %}
 
 {% block importar %}
+    <!-- Start WOWSlider.com HEAD section -->
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}slider/engine1/style.css" />
+    <!-- End WOWSlider.com HEAD section -->
+{% endblock %}
+
+{% block importar2 %}
+    <!-- Start WOWSlider.com HEAD section -->
     <script type="text/javascript" src="{{ STATIC_URL }}slider/engine1/jquery.js"></script>
+    <!-- End WOWSlider.com HEAD section -->
 {% endblock %}
 
 {% block slider %}
     <div id="slider">
-       <!-- Start WOWSlider.com BODY section -->
-        <div id="wowslider-container1">
-            <div class="ws_images"><ul>
-                <li><img src="{{STATIC_URL}}slider/data1/images/1.png" alt="Responsive Web Design" title="Responsive Web Design" id="wows1_0"/>Conoce más...</li>
-                <li><img src="{{STATIC_URL}}slider/data1/images/2.png" alt="Redes Sociales" title="Redes Sociales" id="wows1_1"/>Conoce su impacto en tu sitio web</li>
-                <li><img src="{{STATIC_URL}}slider/data1/images/3.jpg" alt="Facebook" title="Facebook" id="wows1_2"/>Leer mas..</li>
-                <li><img src="{{STATIC_URL}}slider/data1/images/4.png" alt="Marketing Web" title="Marketing Web" id="wows1_3"/>Da click aquí..</li>
-                </ul>
-            </div>
-            <div class="ws_thumbs">
-                <div>
-                <a href="#" title="Responsive Web Design"><img src="{{STATIC_URL}}slider/data1/tooltips/1.png" alt="" /></a>
-                <a href="#" title="Redes Sociales"><img src="{{STATIC_URL}}slider/data1/tooltips/2.png" alt="" /></a>
-                <a href="#" title="Facebook"><img src="{{STATIC_URL}}slider/data1/tooltips/3.jpg" alt="" /></a>
-                <a href="#" title="Marketing Web"><img src="{{STATIC_URL}}slider/data1/tooltips/4.png" alt="" /></a>
-                </div>
-            </div>
-            <div class="ws_shadow"></div>
+        <!-- Start WOWSlider.com BODY section -->
+    <div id="wowslider-container1">
+        <div class="ws_images"><ul>
+    <li><img src="{{ STATIC_URL }}slider/data1/images/3.jpg" alt="Suma fans" title="Suma fans" id="wows1_0"/>Agrega fans a tu empresa</li>
+    <li><img src="{{ STATIC_URL }}slider/data1/images/4.png" alt="Internet y Marketing" title="Internet y Marketing" id="wows1_1"/>Mezcla las nuevas tecnologias</li>
+    <li><img src="{{ STATIC_URL }}slider/data1/images/1.png" alt="Responsive applications for IOS and Android" title="Responsive applications for IOS and Android" id="wows1_2"/>Crea aplicaciones moviles</li>
+    <li><img src="{{ STATIC_URL }}slider/data1/images/2.png" alt="Administracion de Redes sociales" title="Administracion de Redes sociales" id="wows1_3"/>Administra tus redes sociales</li>
+    </ul></div>
+    <div class="ws_bullets"><div>
+    <a href="#" title="Suma fans"><img src="{{ STATIC_URL }}slider/data1/tooltips/3.jpg" alt="Suma fans"/>1</a>
+    <a href="#" title="Internet y Marketing"><img src="{{ STATIC_URL }}slider/data1/tooltips/4.png" alt="Internet y Marketing"/>2</a>
+    <a href="#" title="Responsive applications for IOS and Android"><img src="{{ STATIC_URL }}slider/data1/tooltips/1.png" alt="Responsive applications for IOS and Android"/>3</a>
+    <a href="#" title="Administracion de Redes sociales"><img src="{{ STATIC_URL }}slider/data1/tooltips/2.png" alt="Administracion de Redes sociales"/>4</a>
+    </div></div>
+        <div class="ws_shadow"></div>
         </div>
-    <script type="text/javascript" src="{{STATIC_URL}}slider/engine1/wowslider.js"></script>
-    <script type="text/javascript" src="{{STATIC_URL}}slider/engine1/script.js"></script>
-    <!-- End WOWSlider.com BODY section -->
+        <script type="text/javascript" src="{{ STATIC_URL }}slider/engine1/wowslider.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}slider/engine1/script.js"></script>
+        <!-- End WOWSlider.com BODY section -->
     </div>
 {% endblock %}
 
 {% block contenido %}
     <section>
-	<h2>Publicaciones Destacadas</h2>
+        <h2>Publicaciones Destacadas</h2>   
         {% for item in publicacion %}
         <article>
-            <figure>
+            <figure id="img-articulo">
                 {% load thumbnail %}
-                <img src="{% thumbnail item.imagen 100x100 crop %}" alt="Imagen de Publicacion" />
+                <img src="{% thumbnail item.imagen 120x120 crop %}" alt="Imagen de Publicacion" />
                 <!--<img src="{{MEDIA_URL}}{{item.imagen}}" alt="Imagen de Publicacion" width=120px height=120px>-->
             </figure>
-            <h1>{{item.titulo}}</h1> <br>
-            <p>{{item.contenido|truncatewords:20}}</p>
+            <div id="titulo-articulo">
+                <h1>{{item.titulo}}</h1> <br>
+            </div>
+            <div id="contenido-articulo">
+                <p>{{item.contenido|truncatewords:20}}</p>
+            </div>
+            <div id="ver-mas">
+                <a href="">Leer mas...</a>
+            </div>
         </article>
         {% endfor %}
     </section>
