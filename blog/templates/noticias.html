@@ -1,0 +1,37 @@
+{% extends "base.html "%}
+
+{% block titulo %}Noticias{% endblock %}
+
+{% block contenido %}
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+	<section id="seccion-noticias">
+		<h2>Ultimas Noticias</h2>   
+        {% for item in publicacion %}
+        <article>
+            <figure id="img-noticia">
+                {% load thumbnail %}
+                <a href="/noticia/{{item.id}}"><img src="{% thumbnail item.imagen 120x120 crop %}" alt="Imagen de Publicacion" /></a>
+                <!--<img src="{{MEDIA_URL}}{{item.imagen}}" alt="Imagen de Publicacion" width=120px height=120px>-->
+            </figure>
+            <div id="titulo-articulo">
+                <h1>{{item.titulo}}</h1> <br>
+            </div>
+            <div class="fb-share-button" data-href="http://sanchezdav.pythonanywhere.com" data-type="button_count"></div>
+            <div id="contenido-articulo">
+                <p>{{item.contenido|truncatewords:40}}</p>
+            </div>
+            <div id="ver-mas">
+                <a href="/noticia/{{item.id}}">Leer mas...</a>
+            </div>
+        </article>
+        {% endfor %}
+    </section>
+{% endblock %}

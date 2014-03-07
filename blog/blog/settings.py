@@ -94,3 +94,9 @@ STATICFILES_DIRS = (
 )
 
 MEDIA_ROOT = join(BASE_DIR, "media")
+
+EMAIL_USE_TLS= True
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST_USER= 'karlajaurez@gmail.com'
+EMAIL_HOST_PASSWORD= 'Pimienta2393'
+EMAIL_PORT= 587

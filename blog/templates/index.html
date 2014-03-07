@@ -40,13 +40,13 @@
 {% endblock %}
 
 {% block contenido %}
-    <section>
+    <section id="seccion-inicio">
         <h2>Publicaciones Destacadas</h2>   
         {% for item in publicacion %}
         <article>
             <figure id="img-articulo">
                 {% load thumbnail %}
-                <img src="{% thumbnail item.imagen 120x120 crop %}" alt="Imagen de Publicacion" />
+                <a href="/noticia/{{item.id}}"><img src="{% thumbnail item.imagen 120x120 crop %}" alt="Imagen de Publicacion" /></a>
                 <!--<img src="{{MEDIA_URL}}{{item.imagen}}" alt="Imagen de Publicacion" width=120px height=120px>-->
             </figure>
             <div id="titulo-articulo">
@@ -56,7 +56,7 @@
                 <p>{{item.contenido|truncatewords:20}}</p>
             </div>
             <div id="ver-mas">
-                <a href="">Leer mas...</a>
+                <a href="/noticia/{{item.id}}">Leer mas...</a>
             </div>
         </article>
         {% endfor %}

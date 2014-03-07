@@ -1,0 +1,14 @@
+{% extends "base.html "%}
+
+{% block titulo %}Categorias{% endblock %}
+
+{% block contenido %}
+	<section id="seccion-categorias">
+		<h2>Categorias</h2>   
+        {% for item in categorias %}
+        <article>
+            <p>{{item.categoria}}</p>
+        </article>
+        {% endfor %}
+	</section>
+{% endblock %}
