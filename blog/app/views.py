@@ -22,7 +22,8 @@ def categorias(request):
 
 def detalle_noticia(request, id_noticia):
 	dato=get_object_or_404(Publicacion, pk=id_noticia)
-	return render_to_response('detalle_noticia.html',{'noticia':dato}, context_instance=RequestContext(request))
+	pub = Publicacion.objects.all()[:6]
+	return render_to_response('detalle_noticia.html',{'noticia':dato, "publicacion":pub}, context_instance=RequestContext(request))
 
 
 from app.forms import ContactoForm

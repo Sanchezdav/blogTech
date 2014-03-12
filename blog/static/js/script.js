@@ -6,5 +6,4 @@ $( document ).ready(function() {
 function mostrarFormulario()
 {
 	$("#content-login").slideToggle();
-	return false;
 }

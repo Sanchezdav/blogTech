@@ -3,18 +3,19 @@
 {% block titulo %}DetalleNoticia{% endblock %}
 
 {% block contenido %}
-
-    <h2>{{noticia.titulo}}</h2>
-    <p class="subtitle">{{noticia.subtitulo}}</p>
-    <p>{{noticia.link}}</p>
-    <p>{{noticia.contenido}}</p>
-    <p>{{noticia.categoria}}</p>
-    {% if noticia.imagen %}
-				<img id="noticia" src="{{MEDIA_URL}}{{noticia.imagen}}"/>
-    {% endif %}
-    <br>
-    <p>Fecha de publicación: {{noticia.fechaPub}}</p>
-    <p>Publicado por: {{noticia.autor}}</p>
-    <a href="/">Regresar</a>
+    <div id="detalle">
+        <h2>{{noticia.titulo}}</h2>
+        <p class="subtitle">{{noticia.subtitulo}}</p>
+        <p>{{noticia.link}}</p>
+        <p>{{noticia.contenido}}</p>
+        <p>{{noticia.categoria}}</p>
+        {% if noticia.imagen %}
+                    <img id="noticia" src="{{MEDIA_URL}}{{noticia.imagen}}"/>
+        {% endif %}
+        <br>
+        <p>Fecha de publicación: {{noticia.fechaPub}}</p>
+        <p>Publicado por: {{noticia.autor}}</p>
+        <a href="/">Regresar</a>
+    </div>
 
 {% endblock %}
