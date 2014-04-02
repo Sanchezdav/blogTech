@@ -31,6 +31,15 @@
             <div id="ver-mas">
                 <a href="/noticia/{{item.id}}">Leer mas...</a>
             </div>
+            {% if user.is_authenticated %}
+                <div id="votos">
+                    <a href="/up/{{item.id}}" class="up"></a>
+                    <p>{{item.votos}}</p>
+                    <a href="/down/{{item.id}}" class="down"></a>
+                </div>
+            {% else %}
+                <br><span>Logueate para votar</span>
+            {% endif %}
         </article>
         {% endfor %}
     </section>

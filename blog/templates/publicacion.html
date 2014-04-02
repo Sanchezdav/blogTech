@@ -1,0 +1,17 @@
+{% extends "base.html "%}
+
+{% block titulo %}Publicacion{% endblock %}
+
+{% block contenido %}
+	<div id="pub">
+		{% if user.is_authenticated %}
+			<h2>Publica un articulo</h2>
+			<form method="POST" enctype="multipart/form-data">{% csrf_token %}
+				{{form.as_p}}
+				<input type="submit" value="Publicar">
+			</form>
+		{% else %}
+			<h2>Necesitas loguearte para publicar contenido</h2>
+		{% endif %}
+	</div>
+{% endblock %}

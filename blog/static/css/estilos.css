@@ -10,6 +10,38 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'icomoon2';
+    src:url('fonts/icomoon2.eot?fvpp5b');
+    src:url('fonts/icomoon2.eot?#iefixfvpp5b') format('embedded-opentype'),
+        url('fonts/icomoon2.woff?fvpp5b') format('woff'),
+        url('fonts/icomoon2.ttf?fvpp5b') format('truetype'),
+        url('fonts/icomoon2.svg?fvpp5b#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.up, .down {
+    font-family: 'icomoon2';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.up:before {
+    content: "\e700";
+}
+.down:before {
+    content: "\e701";
+}
+
 [class^="icon-"], [class*=" icon-"] {
     font-family: 'icomoon';
     speak: none;
@@ -272,6 +304,20 @@ nav ul li a:hover
     border-radius: 2px;
 }
 
+#bienvenido
+{
+    color: white;
+    display: inline-block;
+    margin-left: 10em;
+    margin-top: 1em;
+    vertical-align: top;
+}
+
+#bienvenido em
+{
+    font-weight: bold;
+}
+
 #caja-h1
 {
     display: inline-block;
@@ -426,7 +472,7 @@ nav ul li a:hover
     padding: .3em;
     padding-top: .5em;
     position: relative;
-    height: 15em;
+    height: 17em;
     vertical-align: top;
     width: 45%;
 }
@@ -474,6 +520,7 @@ nav ul li a:hover
     margin-top: .5em;
     padding: .3em;
     padding-top: .5em;
+    padding-bottom: 3.5em;
     position: relative;
     height: 15em;
     vertical-align: top;
@@ -487,6 +534,44 @@ nav ul li a:hover
     font-style: italic;
     font-weight: bold;
     text-align: center;
+}
+
+#contenido #seccion-noticias #votos
+{
+    background: deepskyblue;
+    border-radius: 4px;
+    padding: .5em;
+    margin: .5em;
+    text-align: center;
+    width: 20%;
+}
+
+#contenido #seccion-noticias #votos a
+{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-size: 1.5em;
+
+    -webkit-transition:color 0.2s;
+    -moz-transition:color 0.2s;
+    -ms-transition: color 0.2s;
+    -o-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+#contenido #seccion-noticias #votos a:hover
+{
+    color: #2980b9;
+}
+
+#contenido #seccion-noticias #votos p
+{
+    display: inline-block;
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 #contenido #seccion-categorias
@@ -618,6 +703,7 @@ nav ul li a:hover
 {
     border: 2px solid #2980b9;
     border-radius: 4px;
+    margin-left: .5em;
     padding: .2em;
 }
 
@@ -706,8 +792,8 @@ nav ul li a:hover
 #ver-mas
 {
     position: absolute;
-    right: .5em;
-    bottom: .2em;
+    right: .9em;
+    bottom: .3em;
     text-align: right;
     width: 30%;
 }
@@ -746,6 +832,29 @@ nav ul li a:hover
 	box-shadow: rgba(255,255,255,0.6) 2px 2px 10px;
 }
 
+#salir
+{
+    background: #3498db;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.6) 5px 5px 20px; 
+    color: white;
+    font-weight: bold;
+    padding: .3em .8em;
+    text-decoration: none;
+    text-shadow: rgba(0,0,0,0.6) 2px 2px 5px;
+
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#salir:hover
+{
+    background: #27ae60;
+    box-shadow: rgba(255,255,255,0.6) 2px 2px 10px;
+}
 #publicar
 {
 	position: absolute;
@@ -846,4 +955,159 @@ nav ul li a:hover
     padding-left: 4.5em;
     padding-top: 1em;
     vertical-align: top;
+}
+
+#content-login2
+{
+    background: gainsboro;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.6) 5px 5px 15px;
+    display: inline-block; 
+    margin-right: 3em;
+    margin-top: 1em;
+    padding: 1em;
+    width: 60%;
+}
+
+#content-login2 form label, #content-login2 form input[type=text], #content-login2 form input[type=submit]
+{
+    display: block;
+    margin-top: .3em;
+    margin-bottom: .3em;
+}
+
+#content-login2 form input[type=submit]
+{
+    border: 0;
+    margin-top: .7em;
+    background: #3498db;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.6) 5px 5px 20px; 
+    color: white;
+    font-weight: bold;
+    padding: .3em .8em;
+    text-decoration: none;
+    text-shadow: rgba(0,0,0,0.6) 2px 2px 5px;
+
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#content-login2 form input[type=submit]:hover
+{
+    cursor: pointer;
+    background: #27ae60;
+    box-shadow: rgba(255,255,255,0.6) 2px 2px 10px;
+}
+
+ #content-login2 form input[type=text], input[type=password]
+{
+    border: 2px solid #2980b9;
+    border-radius: 4px;
+    margin-left: .5em;
+    padding: .2em;
+}
+
+#pub
+{
+    background: gainsboro;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.6) 5px 5px 15px;
+    display: inline-block; 
+    margin-right: 3em;
+    margin-top: 1em;
+    padding: 1em;
+    width: 60%;
+}
+
+#pub form input[type=text], #pub form textarea, #pub form select, #pub form input[type=url]
+{
+    border: 2px solid #2980b9;
+    border-radius: 4px;
+    margin-left: .5em;
+    padding: .2em;
+}
+
+#pub form input[type=text], #pub form textarea, #pub form select, #pub form link, #pub form label, #pub form input[type=url]
+{
+    display: block;
+    margin: .5em;
+}
+
+#pub form input[type=submit]
+{
+    border: 0;
+    margin-top: .7em;
+    background: #3498db;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.6) 5px 5px 20px; 
+    color: white;
+    font-weight: bold;
+    padding: .3em .8em;
+    text-decoration: none;
+    text-shadow: rgba(0,0,0,0.6) 2px 2px 5px;
+
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#pub form input[type=submit]:hover
+{
+    cursor: pointer;
+    background: #27ae60;
+    box-shadow: rgba(255,255,255,0.6) 2px 2px 10px;
+}
+
+#reg
+{
+    background: gainsboro;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.6) 5px 5px 15px;
+    display: inline-block; 
+    margin-right: 3em;
+    margin-top: 1em;
+    padding: 1em;
+    width: 60%;
+}
+
+#reg form input[type=text], #reg form input[type=password]
+{
+    border: 2px solid #2980b9;
+    border-radius: 4px;
+    margin: .5em;
+    display: block;
+    padding: .2em;
+}
+
+#reg form input[type=submit]
+{
+    border: 0;
+    margin-top: .7em;
+    background: #3498db;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.6) 5px 5px 20px; 
+    color: white;
+    font-weight: bold;
+    padding: .3em .8em;
+    text-decoration: none;
+    text-shadow: rgba(0,0,0,0.6) 2px 2px 5px;
+
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#reg form input[type=submit]:hover
+{
+    cursor: pointer;
+    background: #27ae60;
+    box-shadow: rgba(255,255,255,0.6) 2px 2px 10px;
 }

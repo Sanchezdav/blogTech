@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block titulo %}DetalleNoticia{% endblock %}
+{% block titulo %}{{noticia.titulo}}{% endblock %}
 
 {% block contenido %}
     <div id="detalle">
@@ -14,8 +14,8 @@
         {% endif %}
         <br>
         <p>Fecha de publicación: {{noticia.fechaPub}}</p>
-        <p>Publicado por: {{noticia.autor}}</p>
-        <a href="/">Regresar</a>
+        <p>Publicado por: {{noticia.autor|capfirst}}</p>
+        <a href="/noticias/">Regresar</a>
     </div>
 
 {% endblock %}

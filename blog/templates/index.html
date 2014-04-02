@@ -46,7 +46,9 @@
         <article>
             <figure id="img-articulo">
                 {% load thumbnail %}
-                <a href="/noticia/{{item.id}}"><img src="{% thumbnail item.imagen 120x120 crop %}" alt="Imagen de Publicacion" /></a>
+                <a href="/noticia/{{item.id}}">
+                    <img src="{% thumbnail item.imagen 120x120 crop %}" alt="Imagen de Publicacion" />
+                </a>
                 <!--<img src="{{MEDIA_URL}}{{item.imagen}}" alt="Imagen de Publicacion" width=120px height=120px>-->
             </figure>
             <div id="titulo-articulo">

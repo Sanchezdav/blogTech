@@ -2,17 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 #libreria para los thumbnails
 from easy_thumbnails.fields import ThumbnailerImageField
-
-class Perfil(models.Model):
-    usuario = models.OneToOneField(User)
-    avatar = models.ImageField(upload_to = 'Avatar', null=True, blank=True)
-    descripcion = models.TextField(max_length = 255, null=True, blank=True, verbose_name = 'Sobre ti')
-    
-    class Meta():
-        verbose_name_plural = 'Perfil'
-        
-    def __unicode__(self):
-        return self.usuario.username
     
 class Categoria(models.Model):
     categoria = models.CharField(max_length=50)
@@ -21,14 +10,15 @@ class Categoria(models.Model):
         return self.categoria
     
 class Publicacion(models.Model):
-    autor = models.ForeignKey(Perfil)
+    autor = models.ForeignKey(User)
     titulo = models.CharField(max_length=50)
     subtitulo = models.CharField(max_length=60, null=True, blank=True)
     link = models.URLField(null=True, blank=True)
     contenido = models.TextField(max_length = 255)
-    categoria = models.ManyToManyField(Categoria)
+    categoria = models.ForeignKey(Categoria)
     fechaPub = models.DateTimeField(auto_now_add = True)
     imagen = ThumbnailerImageField(upload_to="img-pub", null=True, blank=True)
+    votos = models.IntegerField(default=0)
     
     class Meta():
         verbose_name_plural = 'Publicaciones'
@@ -43,14 +33,6 @@ class Comentario(models.Model):
     
     def __unicode__(self):
         return self.comentario
-    
-class Like(models.Model):
-    publicacion = models.ForeignKey(Publicacion)
-    usuario = models.ForeignKey(User)
-    like = models.BooleanField()
-    
-    def __unicode__(self):
-        return unicode(self.id)
     
     
 
